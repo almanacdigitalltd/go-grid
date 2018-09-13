@@ -1,0 +1,47 @@
+@import "vars";
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$grid-gutter-size;
+    margin-left: -$grid-gutter-size;
+}
+
+.col {
+	flex-basis: 0;
+	flex-grow: 1;
+	padding: 0 $grid-gutter-size;
+}
+
+@for $i from 1 through $grid-type {
+	.col-#{$i} {
+		flex-basis: auto;
+		flex-grow: 0;
+		padding: 0 $grid-gutter-size;
+		width: (100% / $grid-type * $i);
+	}
+}
+
+@media (min-width: $ad-small) {
+	@for $i from 1 through $grid-type {
+		.col-sm-#{$i} {
+			width: (100% / $grid-type * $i);
+		}
+	}
+}
+
+@media (min-width: $ad-medium) {
+	@for $i from 1 through $grid-type {
+		.col-md-#{$i} {
+			width: (100% / $grid-type * $i);
+		}
+	}
+}
+
+@media (min-width: $ad-large) {
+	@for $i from 1 through $grid-type {
+		.col-lg-#{$i} {
+			width: (100% / $grid-type * $i);
+		}
+	}
+}
