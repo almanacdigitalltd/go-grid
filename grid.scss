@@ -22,7 +22,7 @@
 	}
 }
 
-@media (min-width: $ad-small) {
+@media (min-width: $grid-small) {
 	@for $i from 1 through $grid-type {
 		.col-sm-#{$i} {
 			width: (100% / $grid-type * $i);
@@ -30,7 +30,7 @@
 	}
 }
 
-@media (min-width: $ad-medium) {
+@media (min-width: $grid-medium) {
 	@for $i from 1 through $grid-type {
 		.col-md-#{$i} {
 			width: (100% / $grid-type * $i);
@@ -38,7 +38,7 @@
 	}
 }
 
-@media (min-width: $ad-large) {
+@media (min-width: $grid-large) {
 	@for $i from 1 through $grid-type {
 		.col-lg-#{$i} {
 			width: (100% / $grid-type * $i);
