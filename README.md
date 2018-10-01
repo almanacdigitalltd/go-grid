@@ -11,3 +11,15 @@ Tablet
 
 Desktop
 `.col-lg-1`, `.col-lg-2`, `.col-lg-3` etc
+
+
+## Ordering 
+
+Mobile
+`order-sm-1`, `order-sm-2`, `order-sm-3` etc
+
+Tablet
+`order-md-1`, `order-md-2`, `order-md-3` etc
+
+Desktop
+`order-lg-1`, `order-lg-2`, `order-lg-3` etc

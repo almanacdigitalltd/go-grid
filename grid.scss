@@ -13,35 +13,88 @@
 	padding: 0 $grid-gutter-size;
 }
 
-@for $i from 1 through $grid-type {
+// -----------------------------
+//         Grid Default
+// -----------------------------
+
+@for $i from 1 through $grid-columns {
 	.col-#{$i} {
+		order: 0;
 		flex-basis: auto;
 		flex-grow: 0;
 		padding: 0 $grid-gutter-size;
-		width: (100% / $grid-type * $i);
+		width: (100% / $grid-columns * $i);
 	}
 }
+
+// -----------------------------
+//     Grid Small Breakpoint
+// -----------------------------
 
 @media (min-width: $grid-small) {
-	@for $i from 1 through $grid-type {
+	@for $i from 1 through $grid-columns {
 		.col-sm-#{$i} {
-			width: (100% / $grid-type * $i);
+			width: (100% / $grid-columns * $i);
+		}
+
+		.order-sm-#{$i} {
+			order: $i;
 		}
 	}
+
+	.order-sm-first {
+		order: -1;
+	}
+
+	.order-sm-last {
+		order: $grid-columns + 1;
+	}
 }
+
+// -----------------------------
+//     Grid Medium Breakpoint
+// -----------------------------
 
 @media (min-width: $grid-medium) {
-	@for $i from 1 through $grid-type {
+	@for $i from 1 through $grid-columns {
 		.col-md-#{$i} {
-			width: (100% / $grid-type * $i);
+			width: (100% / $grid-columns * $i);
 		}
+
+		.order-md-#{$i} {
+			order: $i;
+		}
+	}
+
+	.order-md-first {
+		order: -1;
+	}
+
+	.order-md-last {
+		order: $grid-columns + 1;
 	}
 }
 
+// -----------------------------
+//     Grid Large Breakpoint
+// -----------------------------
+
 @media (min-width: $grid-large) {
-	@for $i from 1 through $grid-type {
+	@for $i from 1 through $grid-columns {
 		.col-lg-#{$i} {
-			width: (100% / $grid-type * $i);
+			width: (100% / $grid-columns * $i);
 		}
+
+		.order-lg-#{$i} {
+			order: $i;
+		}
+	}
+
+	.order-lg-first {
+		order: -1;
+	}
+
+	.order-lg-last {
+		order: $grid-columns + 1;
 	}
 }
